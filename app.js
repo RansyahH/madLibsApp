@@ -21,12 +21,15 @@ window.onload = () => {
     `${solicitation} a verb (past-tense)`,
   ];
 
-  let userInputs = [];
-  for (let i = questionTotal; i >= 0; i--) {
+  
 
-    if (userInputs  === 0){
-        console.log("the user didn't write anything");
-    }
+  let userInputs = [];
+
+
+  for (let i = questionTotal; i >= 0; i--) {
+    
+
+    
 
     console.log(
       questionArray[questionCounter] + `... (${questionTotal} questions left)`
@@ -37,7 +40,13 @@ window.onload = () => {
       ,)
     ); 
     
-    
+    while(userInputs == false){
+      console.log("the user didn't write anything");
+      userInputs.push(prompt(
+          questionArray[questionCounter] + `... (${questionTotal} questions left)`
+        ,)
+      ); 
+    } 
     console.log(userInputs);
     questionCounter++;
     questionTotal--;
